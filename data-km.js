@@ -1,0 +1,188 @@
+const DATA_KM = {
+  id: 'km',
+  name: 'Konzeption Non-Print Medien',
+  short: 'KM',
+  day: 'Mittwoch',
+  color: '--km',
+
+  kannListe: [
+    { group: '1. Webdesign Grundlagen', items: [
+      'Websites analysieren und Zielgruppen definieren',
+      'Webseiten logisch strukturieren und Benutzerführung erklären',
+      'HTML- und CSS-Grundlagen erklären',
+      'Bilddateiformate unterscheiden (JPG, PNG, SVG, GIF)',
+      'Erklären, wann JPG, PNG oder GIF sinnvoll sind',
+      'Weblayouts planen',
+    ]},
+    { group: '2. Informationsarchitektur', items: [
+      'Sitemaps erstellen',
+      'Haupt- und Unterseiten strukturieren',
+      'Navigationen planen und Benutzerwege analysieren',
+      'Seiten logisch benennen',
+      'Website-Strukturen visualisieren',
+    ]},
+    { group: '3. Figma Grundlagen', items: [
+      'Frames und Shapes verwenden',
+      'Texte und Ebenen organisieren',
+      'Shortcuts anwenden',
+      'Komponenten erstellen',
+      'Auto Layout verwenden',
+      'Bilder einfügen und zuschneiden',
+      'Maskierungen einsetzen',
+      'Responsive Elemente gestalten',
+    ]},
+    { group: '4. Layout & Responsive Design', items: [
+      'Raster verwenden und das 12-Spalten-System erklären',
+      'Responsive Layouts erstellen',
+      'Layouts für Smartphone, Tablet und Desktop planen',
+      'Wireframes entwickeln',
+      'Mockups erstellen',
+      'Layoutentscheidungen begründen',
+    ]},
+    { group: '5. Komponenten & Designsysteme', items: [
+      'Komponenten erstellen und Varianten nutzen',
+      'Designsysteme aufbauen',
+      'Farbvariablen erstellen',
+      'Typostile anlegen',
+      'Globale Designänderungen durchführen',
+      'Konsistente Designs entwickeln',
+    ]},
+    { group: '6. UX & UI Design', items: [
+      'Benutzerfreundlichkeit analysieren',
+      'Nutzerführung verbessern',
+      'Interfaces gestalten',
+      'Interaktive Prototypen erstellen',
+      'Hover-Effekte planen',
+      'Benutzerprobleme erkennen',
+      'UX-Entscheidungen begründen',
+    ]},
+    { group: '7. Projektmanagement', items: [
+      'Projektstrukturpläne erstellen',
+      'Arbeitspakete definieren',
+      'Gantt-Diagramme lesen und erstellen',
+      'Stakeholder analysieren',
+      'Risiken bewerten',
+      'Zeitpläne entwickeln',
+    ]},
+  ],
+
+  lernzettel: {
+    kompakt: [
+      { title: 'HTML & CSS', content: 'HTML = Struktur (WAS ist auf der Seite). CSS = Design (WIE es aussieht). HTML-Tags: h1 (Überschrift), p (Absatz), img (Bild), a (Link). CSS verändert: Farben, Schriftarten, Größen, Abstände, Layouts.' },
+      { title: 'Responsive Design', content: 'Website passt sich allen Bildschirmgrößen an (Smartphone, Tablet, Desktop). Wichtig weil: meiste Nutzer = Smartphone. 12-Spalten-Grid = Standard im Webdesign. Margin = Außenabstand, Gutter = Abstand zwischen Spalten.' },
+      { title: 'UX vs. UI', content: 'UX (User Experience) = Wie fühlt sich die Nutzung an? Gute UX: schnell, verständlich, nicht verwirrt. UI (User Interface) = Wie sieht es aus? Farben, Buttons, Icons, Layout. Konsistenz = Elemente verhalten sich überall gleich.' },
+      { title: 'Wireframe vs. Mockup vs. Prototyp', content: 'Wireframe = einfache Struktur/Skizze (kein Design). Mockup = realistisches visuelles Design. Prototyp = klickbares Modell (zum Testen). Low-Fi = einfach, High-Fi = detailliert.' },
+      { title: 'Figma', content: 'Digitales Designprogramm für UI/Webdesign/Prototyping. Frames = Arbeitsflächen (Seiten/Screens). Komponenten = wiederverwendbare Elemente. Instanzen = Kopien. Auto Layout = intelligenter Container (passt sich an). Varianten = verschiedene Zustände eines Elements.' },
+      { title: 'Bildformate Web', content: 'JPG = Fotos, kleine Datei. PNG = Transparenz, Logos. SVG = Vektor, Icons/Logos, skalierbar. GIF = Animationen.' },
+      { title: 'Projektmanagement', content: 'Projektstrukturplan = großes Projekt in kleine Aufgaben aufteilen. Arbeitspakete = einzelne Aufgaben. Gantt-Diagramm = Zeitplanung/Deadlines. Stakeholder = alle Personen mit Interesse am Projekt. Risikoanalyse = mögliche Probleme früh erkennen.' },
+    ],
+    mittel: [
+      { title: '1. Webdesign Grundlagen', content: 'Eine gute Website ist übersichtlich, verständlich, modern, benutzerfreundlich und technisch funktional. Sie soll nicht nur gut aussehen, sondern dem Nutzer helfen, schnell Informationen zu finden. Wichtige Bestandteile: Navigation, Header, Inhalte, Bilder, Buttons, Footer. Zielgruppenanalyse: Vor dem Design muss man wissen, für wen die Website ist. Alter, Interessen, Geräte und Erwartungen der Nutzer bestimmen das Design.' },
+      { title: '2. HTML & CSS', content: 'HTML (HyperText Markup Language) beschreibt die Struktur einer Website – WAS auf der Seite ist. Tags: h1 (Überschrift), p (Absatz), img (Bild), a (Link). CSS (Cascading Style Sheets) gestaltet das Aussehen – WIE es aussieht. CSS verändert: Farben, Schriftarten, Größen, Abstände, Layouts und Animationen. Responsive Design: die Website passt sich verschiedenen Bildschirmgrößen an (Smartphone, Tablet, Desktop). Wichtig, da die meisten Nutzer Smartphones verwenden.' },
+      { title: '3. Informationsarchitektur', content: 'Informationsarchitektur beschreibt, wie Inhalte organisiert und strukturiert werden. Der Nutzer soll sich orientieren und schnell Informationen finden können. Sitemap: zeigt die Struktur der Website (Startseite → Unterseiten). Navigation: hilft dem Nutzer sich zu bewegen – muss einfach, verständlich und logisch aufgebaut sein. Schlechte Navigation = Nutzer finden nichts und verlassen die Seite.' },
+      { title: '4. UX & UI', content: 'UX (User Experience) = Nutzungserlebnis. Gute UX: Nutzer findet schnell Informationen, versteht die Website, fühlt sich wohl. Schlechte UX: komplizierte Navigation, unklare Buttons, zu viele Informationen. UI (User Interface) = Benutzeroberfläche. Beinhaltet: Farben, Buttons, Icons, Schriftarten, Layouts. Konsistenz: Elemente verhalten sich überall gleich (z.B. alle Buttons sehen ähnlich aus).' },
+      { title: '5. Wireframes, Mockups & Prototypen', content: 'Wireframe = einfache Layoutskizze. Zeigt Struktur, Positionen und Navigation – KEIN Design. Low Fidelity = sehr einfach. High Fidelity = detaillierter. Mockup = realistische Vorschau des Designs. Zeigt wie die fertige Website aussehen könnte. Prototyp = simuliert die fertige Website. Man kann klicken und navigieren. Vorteile: Nutzerführung testen, Fehler früh erkennen, Kunden präsentieren.' },
+      { title: '6. Figma & Komponenten', content: 'Figma ist ein digitales Designprogramm für UI Design, Webdesign, Prototyping und Designsysteme. Frames = Arbeitsflächen (repräsentieren Webseiten/Screens). Komponenten = wiederverwendbare Elemente (Buttons, Karten, Navigationen). Instanzen = Kopien einer Komponente – ändern sich automatisch wenn die Hauptkomponente geändert wird. Varianten = verschiedene Zustände (normal/hover/aktiv). Auto Layout = intelligenter Container, Elemente passen sich automatisch an.' },
+      { title: '7. Raster & Designsysteme', content: '12-Spalten-System: sehr häufig im Webdesign. Vorteile: Struktur, Flexibilität, saubere Ausrichtung. Margin = Außenabstand. Gutter = Abstand zwischen Spalten. Designsystem sorgt für Einheitlichkeit. Enthält: Farben, Schriftarten, Buttons, Regeln, Komponenten. Farbvariablen: Farben zentral gespeichert – Änderung wirkt sich überall aus. Typostile: vordefinierte Schriftstile (H1, H2, Body, Caption).' },
+      { title: '8. Projektmanagement', content: 'Projektstrukturplan: großes Projekt wird in kleine Aufgaben aufgeteilt → Übersicht. Arbeitspakete = kleine Aufgaben innerhalb eines Projekts. Gantt-Diagramm zeigt Zeitplanung, Deadlines und Abläufe. Stakeholder = Personen mit Interesse am Projekt (Kunden, Nutzer, Teammitglieder). Risikoanalyse = mögliche Probleme früh erkennen (Zeit-, Technik-, Budgetprobleme).' },
+    ],
+    ausfuehrlich: [
+      { title: '1. Grundlagen von Webdesign', content: 'Webdesign bedeutet die Gestaltung und Planung von Websites. Eine gute Website soll übersichtlich, verständlich, modern, benutzerfreundlich und technisch funktional sein. Wichtig: Eine Website soll nicht nur gut aussehen, sondern dem Nutzer helfen, schnell Informationen zu finden. Ziele: Informationen vermitteln, Produkte verkaufen, Vertrauen erzeugen, Nutzer führen, professionell wirken.' },
+      { title: 'Zielgruppenanalyse', content: 'Bevor eine Website gestaltet wird, muss man wissen: Für wen ist die Website? Das nennt man Zielgruppenanalyse. Fragen zur Zielgruppe: Wie alt sind die Nutzer? Welche Interessen haben sie? Welche Geräte benutzen sie? Was erwarten sie? Eine Website für Kinder braucht bunte Farben, große Buttons, einfache Sprache. Eine Website für Anwälte braucht seriöse Farben, klare Struktur, professionellen Stil.' },
+      { title: '2. Informationsarchitektur & Sitemap', content: 'Informationsarchitektur beschreibt, wie Inhalte organisiert und strukturiert werden. Der Nutzer soll sich orientieren, schnell Informationen finden und nicht verwirrt werden. Eine Sitemap zeigt die Struktur einer Website (Startseite → Über uns → Leistungen → Kontakt → Blog). Die Sitemap hilft bei Planung, Übersicht und Navigation. Navigation muss einfach, verständlich und logisch aufgebaut sein. Schlechte Navigation führt dazu, dass Nutzer die Seite verlassen.' },
+      { title: '3. HTML & CSS Grundlagen', content: 'HTML (HyperText Markup Language) beschreibt die Struktur einer Website. HTML ist KEINE Designsprache. Mit HTML erstellt man: Überschriften (h1-h6), Texte (p), Bilder (img), Buttons, Listen, Links (a). HTML bestimmt WAS auf der Website ist. CSS (Cascading Style Sheets) gestaltet das Aussehen. Mit CSS verändert man Farben, Schriftarten, Größen, Abstände, Layouts und Animationen. CSS bestimmt WIE es aussieht.' },
+      { title: '4. Responsive Design', content: 'Responsive Design bedeutet: Die Website passt sich verschiedenen Bildschirmgrößen an. Die Website muss auf Smartphone, Tablet und Desktop funktionieren. Warum wichtig? Die meisten Nutzer verwenden Smartphones. Eine schlechte mobile Website wirkt unprofessionell. Typische Anpassungen: kleinere Schriftgrößen, andere Bildgrößen, Hamburger-Menüs für Smartphones, flexible Container.' },
+      { title: '5. UX – User Experience', content: 'UX bedeutet User Experience → Nutzungserlebnis. Es beschreibt, wie sich die Nutzung einer Website anfühlt. Gute UX: Nutzer findet schnell Informationen, versteht die Website, fühlt sich wohl, wird nicht verwirrt. Schlechte UX: komplizierte Navigation, unklare Buttons, zu viele Informationen, schlechte Struktur, lange Ladezeiten. Ziele von UX: Einfachheit, Klarheit, Effizienz, Nutzerfreundlichkeit.' },
+      { title: '6. UI – User Interface', content: 'UI bedeutet User Interface → Benutzeroberfläche. Das ist der sichtbare Teil der Website. Dazu gehören: Farben, Buttons, Icons, Schriftarten, Layouts. Eine gute Oberfläche ist verständlich, übersichtlich, konsistent und modern. Konsistenz: Elemente verhalten sich überall gleich (alle Buttons sehen ähnlich aus). Das hilft dem Nutzer bei der Orientierung.' },
+      { title: '7. Wireframes & Mockups', content: 'Wireframes sind einfache Layoutskizzen einer Website. Sie zeigen Struktur, Positionen, Inhalte und Navigation. Wichtig: Es geht NICHT um schönes Design, sondern um Aufbau, Planung und Funktion. Low Fidelity = sehr einfache Skizzen. High Fidelity = detailliertere Darstellung. Mockups sind realistische Vorschauen eines Designs. Ein Mockup zeigt, wie die fertige Website aussehen könnte. Unterschied: Wireframe = Struktur & Planung. Mockup = Visuelles Design.' },
+      { title: '8. Prototyping', content: 'Ein Prototyp simuliert die fertige Website. Man kann klicken, navigieren und Übergänge testen. Vorteile: Nutzerführung testen, Fehler früh erkennen, Kunden Präsentationen zeigen. In Figma können Prototypen direkt aus den Designs erstellt werden.' },
+      { title: '9. Figma – Grundlagen', content: 'Figma ist ein digitales Designprogramm für UI Design, Webdesign, Prototyping und Designsysteme. Frames = Arbeitsflächen (repräsentieren Webseiten/Smartphones/Tablets). Shapes = Grundformen (Rechtecke, Kreise, Linien). Ebenen helfen bei Ordnung, Bearbeitung und Struktur.' },
+      { title: '10. Komponenten & Auto Layout', content: 'Komponenten sind wiederverwendbare Elemente (Buttons, Karten, Navigationen). Vorteile: Zeit sparen, konsistentes Design, einfache Änderungen. Instanzen = Kopien einer Komponente. Wenn die Hauptkomponente geändert wird, ändern sich alle Instanzen automatisch. Varianten ermöglichen unterschiedliche Zustände (normaler/Hover/aktiver Button). Auto Layout = intelligenter Container. Elemente passen sich automatisch an. Vorteile: responsives Verhalten, automatische Abstände, flexible Designs.' },
+      { title: '11. Raster, Grid & Designsysteme', content: '12-Spalten-System: sehr häufig im Webdesign. Vorteile: Struktur, Flexibilität, saubere Ausrichtung. Margin = Außenabstand. Gutter = Abstand zwischen Spalten. Alignment = saubere Ausrichtung. Designsystem sorgt für Einheitlichkeit: enthält Farben, Schriftarten, Buttons, Regeln, Komponenten. Farbvariablen: zentral gespeichert, Änderung wirkt sich überall aus. Typostile: H1, H2, Body, Caption.' },
+      { title: '12. Bildformate im Web', content: 'JPG: gut für Fotos, kleine Dateigröße. PNG: unterstützt Transparenz, gut für Logos. SVG: vektorbasiert, perfekt für Icons und Logos, skalierbar. GIF: unterstützt Animationen.' },
+      { title: '13. Projektmanagement', content: 'Projektmanagement bedeutet: digitale Projekte planen und organisieren. Projektstrukturplan: großes Projekt in kleine Aufgaben aufteilen. Arbeitspakete = kleine Aufgaben innerhalb eines Projekts. Gantt-Diagramm zeigt Zeitplanung, Deadlines und Abläufe. Stakeholder = Personen mit Interesse am Projekt (Kunden, Nutzer, Teammitglieder). Risikoanalyse = mögliche Probleme früh erkennen (Zeit-, Technik-, Budgetprobleme).' },
+      { title: '14. CMS & SEO', content: 'CMS (Content Management System): Inhalte ohne Programmieren verwalten. WordPress = sehr bekanntes CMS. Vorteile: einfach, viele Plugins, flexibel. Nachteile: Sicherheitsprobleme möglich, Updates nötig. SEO (Search Engine Optimization): bei Google besser gefunden werden. Wichtige Faktoren: schnelle Website, gute Inhalte, mobile Optimierung, richtige Überschriften, Keywords.' },
+    ],
+  },
+
+  flashcards: [
+    { q: 'Was bedeutet HTML?', a: 'HyperText Markup Language – beschreibt die Struktur einer Website (WAS auf der Seite ist).' },
+    { q: 'Was bedeutet CSS?', a: 'Cascading Style Sheets – gestaltet das Aussehen einer Website (WIE es aussieht). Farben, Schriftarten, Abstände, Layouts.' },
+    { q: 'Was ist Responsive Design?', a: 'Das Design passt sich automatisch an verschiedene Bildschirmgrößen an: Smartphone, Tablet, Desktop.' },
+    { q: 'Was ist der Unterschied zwischen UX und UI?', a: 'UX = User Experience (wie fühlt sich die Nutzung an). UI = User Interface (wie sieht es aus – Buttons, Farben, Icons).' },
+    { q: 'Was ist ein Wireframe?', a: 'Eine einfache Layoutskizze, die Struktur und Positionen zeigt – kein schönes Design, sondern Planung.' },
+    { q: 'Was ist ein Prototyp?', a: 'Ein klickbares Modell, das die fertige Website simuliert. Man kann navigieren und Übergänge testen.' },
+    { q: 'Was ist eine Sitemap?', a: 'Eine Übersicht der Website-Struktur: Startseite → Unterseiten. Hilft bei Planung und Navigation.' },
+    { q: 'Was sind Komponenten in Figma?', a: 'Wiederverwendbare Designelemente (z.B. Buttons). Alle Instanzen (Kopien) ändern sich automatisch, wenn die Hauptkomponente geändert wird.' },
+    { q: 'Was ist Auto Layout in Figma?', a: 'Ein intelligenter Container, dessen Inhalte sich automatisch anpassen. Ideal für responsive Elemente.' },
+    { q: 'Was ist das 12-Spalten-System?', a: 'Ein Raster mit 12 Spalten, das im Webdesign standard ist. Ermöglicht flexible, strukturierte Layouts.' },
+    { q: 'Was bedeutet Konsistenz im UI Design?', a: 'Elemente verhalten sich und sehen überall gleich aus (z.B. alle Buttons haben das gleiche Aussehen). Hilft dem Nutzer bei der Orientierung.' },
+    { q: 'Was ist ein Designsystem?', a: 'Eine Sammlung aus Farben, Schriftarten, Komponenten und Regeln, die für einheitliches Design sorgen.' },
+    { q: 'Was ist der Unterschied zwischen JPG und PNG?', a: 'JPG = gut für Fotos, komprimiert. PNG = unterstützt Transparenz, gut für Logos und Grafiken.' },
+    { q: 'Was ist SEO?', a: 'Search Engine Optimization – Maßnahmen, damit eine Website bei Google besser gefunden wird.' },
+    { q: 'Was ist ein Stakeholder?', a: 'Eine Person oder Gruppe, die Interesse am Projekt hat, z.B. Kunden, Nutzer, Teammitglieder.' },
+    { q: 'Was ist ein Gantt-Diagramm?', a: 'Ein Balkendiagramm, das Zeitplanung, Deadlines und Abläufe eines Projekts visualisiert.' },
+    { q: 'Was ist Low Fidelity vs. High Fidelity?', a: 'Low-Fi = sehr einfache, schnelle Skizzen. High-Fi = detailliertere, ausgearbeitete Darstellungen.' },
+    { q: 'Wofür ist SVG das beste Format?', a: 'Für Icons und Logos – SVG ist vektorbasiert und verlustfrei skalierbar.' },
+    { q: 'Was versteht man unter Informationsarchitektur?', a: 'Wie Inhalte einer Website organisiert und strukturiert werden, damit Nutzer sich leicht orientieren können.' },
+    { q: 'Was sind Varianten in Figma?', a: 'Verschiedene Zustände einer Komponente, z.B. normaler Button, Hover-Zustand, aktiver Button.' },
+  ],
+
+  quiz: [
+    { type: 'mc', q: 'Was beschreibt HTML?', options: ['Das Design einer Website', 'Die Struktur einer Website', 'Die Animation einer Website', 'Die Datenbank einer Website'], correct: 1, explanation: 'HTML beschreibt die Struktur – WAS auf der Seite ist. CSS gestaltet das Aussehen.' },
+    { type: 'mc', q: 'Was ist Responsive Design?', options: ['Eine spezielle Schriftart', 'Ein Design, das sich an verschiedene Bildschirmgrößen anpasst', 'Ein Design nur für Desktop', 'Ein animiertes Design'], correct: 1, explanation: 'Responsive Design passt sich automatisch an Smartphone, Tablet und Desktop an.' },
+    { type: 'mc', q: 'Was ist der Unterschied zwischen Wireframe und Mockup?', options: ['Kein Unterschied', 'Wireframe = visuelles Design, Mockup = Struktur', 'Wireframe = Struktur/Planung, Mockup = visuelles Design', 'Wireframe = klickbar, Mockup = nicht klickbar'], correct: 2, explanation: 'Wireframe zeigt Struktur und Planung ohne Design. Mockup zeigt das fertige visuelle Design.' },
+    { type: 'mc', q: 'Was sind Komponenten in Figma?', options: ['Farben', 'Wiederverwendbare Designelemente', 'Animationen', 'Schriftarten'], correct: 1, explanation: 'Komponenten sind wiederverwendbare Elemente (Buttons, Karten). Alle Instanzen ändern sich, wenn die Hauptkomponente geändert wird.' },
+    { type: 'mc', q: 'Welches Bildformat unterstützt Transparenz?', options: ['JPG', 'GIF', 'PNG', 'BMP'], correct: 2, explanation: 'PNG unterstützt Transparenz und ist ideal für Logos und Grafiken mit freiem Hintergrund.' },
+    { type: 'mc', q: 'Was bedeutet SEO?', options: ['Style Edit Options', 'Search Engine Optimization', 'Screen Element Order', 'Site Edit Overview'], correct: 1, explanation: 'SEO = Search Engine Optimization. Maßnahmen, damit eine Website bei Google besser gefunden wird.' },
+    { type: 'mc', q: 'Was ist ein Gantt-Diagramm?', options: ['Ein Farbsystem', 'Eine Art Sitemap', 'Ein Balkendiagramm zur Zeitplanung', 'Ein Wireframe-Tool'], correct: 2, explanation: 'Ein Gantt-Diagramm visualisiert Zeitplanung, Deadlines und Abläufe eines Projekts.' },
+    { type: 'mc', q: 'Was bedeutet UX?', options: ['User XML', 'User Experience', 'Ultra Exchange', 'Unique Extension'], correct: 1, explanation: 'UX = User Experience. Beschreibt, wie sich die Nutzung einer Website anfühlt.' },
+    { type: 'open', q: 'Erkläre, warum Konsistenz im UI Design wichtig ist. Gib ein konkretes Beispiel.', model: 'Konsistenz bedeutet, dass Elemente sich überall gleich verhalten und aussehen. Beispiel: Alle Buttons auf einer Website haben die gleiche Farbe, Form und Größe. Das hilft dem Nutzer, weil er weiß, dass ein Element ein Button ist, ohne nachdenken zu müssen. Inkonsistenz verwirrt Nutzer und wirkt unprofessionell.' },
+    { type: 'open', q: 'Was sind die Vorteile eines Designsystems? Nenne mindestens 3.', model: '1. Konsistentes Design: Alle Seiten sehen einheitlich aus. 2. Schnelleres Arbeiten: Bereits erstellte Komponenten müssen nicht neu erstellt werden. 3. Bessere Zusammenarbeit: Alle Teammitglieder nutzen dieselben Elemente. 4. Einfache Änderungen: Eine Änderung an einer Komponente wirkt sich automatisch überall aus.' },
+  ],
+
+  aufgaben: [
+    {
+      title: 'Website-Konzept: Lokale Buchhandlung',
+      points: '20 Punkte',
+      question: 'Plane eine Website für eine lokale Buchhandlung "Seiten & Welten".\n\n1. Erstelle eine Sitemap mit mindestens 5 Seiten.\n2. Definiere die Zielgruppe.\n3. Beschreibe die Navigation.\n4. Welche Inhalte kommen auf die Startseite?',
+      model: '1. Sitemap: Startseite → Bücher (Kategorien) → Über uns → Veranstaltungen → Kontakt / Anfahrt.\n2. Zielgruppe: Lesebegeisterte aller Altersgruppen, lokal in der Stadt, eher 25-65 Jahre, bücheraffin.\n3. Navigation: Hauptnavigation oben mit 5 Punkten. Mobile: Hamburger-Menü. Klare Bezeichnungen.\n4. Startseite: Aktuelle Neuheiten, Bestseller, nächste Veranstaltungen, Öffnungszeiten, Angebote.'
+    },
+    {
+      title: 'UX-Analyse: Schlechte Website',
+      points: '15 Punkte',
+      question: 'Eine Website hat folgende Probleme:\n• 3 verschiedene Navigationsleisten an unterschiedlichen Stellen\n• Buttons sehen auf jeder Seite anders aus\n• Text ist sehr klein und hat wenig Kontrast\n• Auf dem Smartphone ist die Seite nicht nutzbar\n\n1. Erkläre, warum das schlechte UX ist.\n2. Wie würdest du jedes Problem lösen?\n3. Was ist Konsistenz und warum ist sie hier wichtig?',
+      model: '1. Schlechte UX: Nutzer sind verwirrt, finden nichts, verlassen die Seite schnell. Professionelle Websites brauchen klare Struktur.\n2. Lösungen: Eine einheitliche Navigation. Einheitliche Buttons (Designsystem). Größere Schrift mit gutem Kontrast. Responsive Design implementieren.\n3. Konsistenz = Elemente verhalten sich überall gleich. Wichtig, weil Nutzer Muster erkennen und sich orientieren.'
+    },
+    {
+      title: 'Figma: Komponenten-Konzept',
+      points: '20 Punkte',
+      question: 'Du sollst ein Button-Komponenten-System in Figma planen.\n\n1. Welche Varianten braucht ein Button (mindestens 4)?\n2. Was ist der Vorteil von Komponenten gegenüber einfachen kopierten Elementen?\n3. Erkläre, was Auto Layout hier bringt.\n4. Wie setzt du Farbvariablen ein?',
+      model: '1. Varianten: Normal, Hover, Aktiv/Pressed, Disabled, eventuell: Primary/Secondary, mit/ohne Icon.\n2. Vorteil: Änderung an Hauptkomponente → alle Instanzen aktualisieren sich automatisch. Spart enorm Zeit.\n3. Auto Layout: Button wächst automatisch mit dem Text mit. Abstände bleiben konsistent.\n4. Farbvariablen: Primärfarbe zentral gespeichert → Button-Farbe referenziert Variable → eine Änderung ändert alle Buttons.'
+    },
+    {
+      title: 'Responsive Layout planen',
+      points: '15 Punkte',
+      question: 'Beschreibe, wie du eine Produktkarte für Desktop, Tablet und Smartphone unterschiedlich layoutest.\n\n1. Desktop: Wie viele Karten nebeneinander?\n2. Tablet: Wie ändert sich das Layout?\n3. Smartphone: Welche Anpassungen sind nötig?\n4. Welche Elemente werden möglicherweise ausgeblendet oder vereinfacht?',
+      model: '1. Desktop: 3-4 Karten nebeneinander, viel Weißraum, detaillierte Infos sichtbar.\n2. Tablet: 2 Karten nebeneinander, etwas weniger Detail.\n3. Smartphone: 1 Karte pro Zeile, größere Buttons (finger-friendly), vereinfachter Text.\n4. Ausblenden: z.B. Kurzbeschreibung, bestimmte Filter, komplexe Navigation → vereinfacht zu Hamburger-Menü.'
+    },
+    {
+      title: 'Projektplan: Website-Redesign',
+      points: '20 Punkte',
+      question: 'Du hast 4 Wochen Zeit, eine bestehende Website zu redesignen. Erstelle einen groben Projektplan.\n\n1. Benenne mindestens 4 Arbeitspakete.\n2. Erstelle eine grobe zeitliche Reihenfolge.\n3. Welche Stakeholder sind beteiligt?\n4. Nenne 2 mögliche Risiken.',
+      model: '1. Arbeitspakete: Analyse der bestehenden Website, Zielgruppenanalyse, Wireframes erstellen, Design in Figma, Prototyp testen, Feedback einarbeiten.\n2. Zeitplan: Woche 1: Analyse & Konzept. Woche 2: Wireframes & Design. Woche 3: Prototyp. Woche 4: Feinschliff & Übergabe.\n3. Stakeholder: Auftraggeber/Kunde, Endnutzer, Entwickler, Designteam.\n4. Risiken: Feedback-Schleifen dauern länger als geplant (Zeitproblem). Technische Einschränkungen des CMS (Technikproblem).'
+    },
+    {
+      title: 'Bildformate im Web',
+      points: '10 Punkte',
+      question: 'Ein Webdesigner fragt dich:\n• "Ich möchte ein Foto als Hintergrundbild einsetzen."\n• "Ich brauche ein Logo mit transparentem Hintergrund."\n• "Ich brauche ein Icon, das in jeder Größe scharf bleibt."\n\nWelches Format empfiehlst du jeweils und warum?',
+      model: '• Hintergrundbild Foto: JPG – gute Qualität bei kleiner Dateigröße, ideal für Fotos.\n• Logo mit Transparenz: PNG – unterstützt transparenten Hintergrund.\n• Icon skalierbar: SVG – vektorbasiert, bleibt in jeder Größe scharf, kleine Dateigröße.'
+    },
+    {
+      title: 'SEO Grundlagen',
+      points: '10 Punkte',
+      question: 'Was bedeutet SEO und warum ist es für eine Website wichtig? Nenne 4 konkrete SEO-Maßnahmen und erkläre sie kurz.',
+      model: 'SEO = Search Engine Optimization. Maßnahmen damit eine Website bei Google besser gefunden wird. Wichtig: Die meisten Nutzer klicken nur auf die ersten Ergebnisse.\n1. Schnelle Ladezeit: Google bevorzugt schnelle Websites.\n2. Mobile Optimierung: Responsive Design ist ein Ranking-Faktor.\n3. Gute Inhalte mit Keywords: Relevante Texte mit passenden Suchbegriffen.\n4. Korrekte Überschriften (h1, h2): Helfen Google die Struktur zu verstehen.'
+    },
+  ],
+};

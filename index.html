@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prüfungsvorbereitung – Mediengestaltung</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-brand">
+      <span class="nav-dot"></span>
+      MG Prüfung
+    </div>
+    <div class="nav-right">
+      <span id="nav-exam-label"></span>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="page-home" class="page active">
+    <div class="home-hero">
+      <p class="hero-sub">Techniker Schule Weilburg · Mediengestaltung</p>
+      <h1 class="hero-title">Prüfungs<span class="hero-accent">vorbereitung</span></h1>
+      <p class="hero-desc">Wähle eine Prüfung aus und starte deine Vorbereitung.</p>
+    </div>
+
+    <div class="exam-grid">
+      <!-- GG -->
+      <div class="exam-card card-gg" onclick="openExam('gg')">
+        <div class="card-day">Montag</div>
+        <div class="card-badge badge-gg">GG</div>
+        <h2 class="card-title">Gestalterische<br/>Grundlagen</h2>
+        <div class="card-topics">
+          <span>Logo</span><span>Farbe</span><span>Typografie</span><span>Print</span><span>Packaging</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <!-- KM -->
+      <div class="exam-card card-km" onclick="openExam('km')">
+        <div class="card-day">Mittwoch</div>
+        <div class="card-badge badge-km">KM</div>
+        <h2 class="card-title">Konzeption<br/>Non-Print Medien</h2>
+        <div class="card-topics">
+          <span>Webdesign</span><span>Figma</span><span>UX/UI</span><span>Responsive</span><span>SEO</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <!-- IT -->
+      <div class="exam-card card-it" onclick="openExam('it')">
+        <div class="card-day">Freitag</div>
+        <div class="card-badge badge-it">IT</div>
+        <h2 class="card-title">Informations&shy;technische<br/>Grundlagen</h2>
+        <div class="card-topics">
+          <span>Medienrecht</span><span>Datenschutz</span><span>DSGVO</span><span>IT</span><span>Sicherheit</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <!-- ALLE -->
+      <div class="exam-card card-alle" onclick="openExam('alle')">
+        <div class="card-day">Alle Prüfungen</div>
+        <div class="card-badge badge-alle">∞</div>
+        <h2 class="card-title">Komplett&shy;vorbereitung</h2>
+        <div class="card-topics">
+          <span>GG</span><span>KM</span><span>IT</span>
+        </div>
+        <div class="card-arrow">→</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAM PAGE -->
+  <div id="page-exam" class="page">
+
+    <!-- Sidebar -->
+    <div class="exam-layout">
+      <aside class="sidebar" id="sidebar">
+        <button class="back-btn" onclick="goHome()">← Zurück</button>
+        <div class="sidebar-exam-info" id="sidebar-info"></div>
+        <nav class="sidebar-nav">
+          <button class="snav-btn active" onclick="showSection('kannliste')" id="btn-kannliste">📋 Kann-Liste</button>
+          <button class="snav-btn" onclick="showSection('lernzettel')" id="btn-lernzettel">📖 Lernzettel</button>
+          <button class="snav-btn" onclick="showSection('flashcards')" id="btn-flashcards">🃏 Flashcards</button>
+          <button class="snav-btn" onclick="showSection('quiz')" id="btn-quiz">❓ Quiz</button>
+          <button class="snav-btn" onclick="showSection('aufgaben')" id="btn-aufgaben">📝 Aufgaben</button>
+          <button class="snav-btn" onclick="showSection('pruefung')" id="btn-pruefung">⏱ Prüfungsmodus</button>
+          <button class="snav-btn" onclick="showSection('referenz')" id="btn-referenz">📖 Referenz</button>
+          <button class="snav-btn" onclick="showSection('tipps')" id="btn-tipps">💡 Tipps & Tools</button>
+        </nav>
+        <div class="sidebar-progress">
+          <p class="progress-label">Kann-Liste Fortschritt</p>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+          <p class="progress-text" id="progress-text">0 / 0</p>
+        </div>
+        <button class="download-btn" onclick="downloadContent()" id="download-btn">⬇ Alles downloaden</button>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="exam-main" id="exam-main">
+
+        <!-- KANN-LISTE -->
+        <section id="section-kannliste" class="section active">
+          <div class="section-header">
+            <div>
+              <h2>📋 Kann-Liste</h2>
+              <p class="section-sub">Hake ab, was du bereits kannst.</p>
+            </div>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('kannliste')">⬇ Download</button>
+            </div>
+          </div>
+          <div id="kannliste-content"></div>
+        </section>
+
+        <!-- LERNZETTEL -->
+        <section id="section-lernzettel" class="section">
+          <div class="section-header">
+            <h2>📖 Lernzettel</h2>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('lernzettel')" title="Lernzettel als TXT herunterladen">⬇ Download</button>
+            </div>
+          </div>
+          <div class="lerntyp-toggle">
+            <button class="toggle-btn active" onclick="setLerntyp('kompakt')">📝 Kompakt</button>
+            <button class="toggle-btn" onclick="setLerntyp('mittel')">📖 Mittel</button>
+            <button class="toggle-btn" onclick="setLerntyp('ausfuehrlich')">📚 Ausführlich</button>
+            <button class="toggle-btn" onclick="setLerntyp('bildlich')">🎨 Bildlich</button>
+            <button class="toggle-btn" onclick="setLerntyp('markiert')">🌈 Markiert</button>
+          </div>
+          <div class="highlight-toolbar" id="highlight-toolbar">
+            <span style="font-size:12px;color:var(--text-muted)">Markieren:</span>
+            <button class="hl-color" data-color="yellow" onclick="setHighlight('yellow')" title="Gelb"></button>
+            <button class="hl-color" data-color="green" onclick="setHighlight('green')" title="Grün"></button>
+            <button class="hl-color" data-color="pink" onclick="setHighlight('pink')" title="Rosa"></button>
+            <button class="hl-color" data-color="blue" onclick="setHighlight('blue')" title="Blau"></button>
+            <button class="hl-color hl-erase" onclick="setHighlight(null)" title="Löschen">⌫</button>
+            <span style="font-size:11px;color:var(--text-muted);margin-left:8px">Text markieren → Farbe wählen</span>
+          </div>
+          <div id="lernzettel-content"></div>
+        </section>
+
+        <!-- FLASHCARDS -->
+        <section id="section-flashcards" class="section">
+          <div class="section-header">
+            <div>
+              <h2>🃏 Flashcards</h2>
+              <p class="section-sub">Klicke auf die Karte zum Umdrehen.</p>
+            </div>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('flashcards')">⬇ Download</button>
+            </div>
+          </div>
+          <div class="flashcard-controls">
+            <button onclick="prevCard()">← Zurück</button>
+            <span id="card-counter">1 / 1</span>
+            <button onclick="nextCard()">Weiter →</button>
+          </div>
+          <div class="flashcard-wrap">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+              <div class="flashcard-inner" id="flashcard-inner">
+                <div class="flashcard-front" id="fc-front"></div>
+                <div class="flashcard-back" id="fc-back"></div>
+              </div>
+            </div>
+          </div>
+          <p class="fc-hint">Tippe auf die Karte zum Umdrehen</p>
+        </section>
+
+        <!-- QUIZ -->
+        <section id="section-quiz" class="section">
+          <div class="section-header">
+            <div>
+              <h2>❓ Quiz</h2>
+              <p class="section-sub">Teste dein Wissen.</p>
+            </div>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('quiz')">⬇ Download</button>
+            </div>
+          </div>
+          <div id="quiz-content"></div>
+        </section>
+
+        <!-- PRÜFUNGSAUFGABEN -->
+        <section id="section-aufgaben" class="section">
+          <div class="section-header">
+            <div>
+              <h2>📝 Einzel-Aufgaben</h2>
+              <p class="section-sub">Aufgaben mit Musterlösungen zum Üben.</p>
+            </div>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('aufgaben')">⬇ Download</button>
+            </div>
+          </div>
+          <div id="aufgaben-content"></div>
+        </section>
+
+        <!-- PRÜFUNGSMODUS -->
+        <section id="section-pruefung" class="section">
+          <div class="section-header">
+            <div>
+              <h2>⏱ Prüfungsmodus</h2>
+              <p class="section-sub">Komplette Beispielprüfungen mit Timer und Auswertung.</p>
+            </div>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('pruefung')">⬇ Download</button>
+            </div>
+          </div>
+          <div id="pruefung-content"></div>
+        </section>
+
+        <!-- REFERENZ -->
+        <section id="section-referenz" class="section">
+          <div class="section-header">
+            <div>
+              <h2>📖 Referenzmaterialien</h2>
+              <p class="section-sub">Detaillierte Erklärungen & Nachschlagewerk.</p>
+            </div>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('referenz')">⬇ Download</button>
+            </div>
+          </div>
+          <div id="referenz-content"></div>
+        </section>
+
+        <!-- TIPPS -->
+        <section id="section-tipps" class="section">
+          <div class="section-header">
+            <h2>💡 Tipps, Tools & KIs</h2>
+            <div class="section-actions">
+              <button class="sec-dl-btn" onclick="downloadSection('tipps')" title="Tipps als TXT herunterladen">⬇ Download</button>
+            </div>
+          </div>
+          <div id="tipps-content"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- EXAM-MODE OVERLAY -->
+  <div id="exam-mode" class="exam-mode">
+    <div class="em-header">
+      <div class="em-info">
+        <div class="em-title" id="em-title">Beispielprüfung</div>
+        <div class="em-progress" id="em-progress">Frage 1 / 8</div>
+      </div>
+      <div class="em-timer" id="em-timer">90:00</div>
+      <button class="em-close" onclick="abortExamMode()" title="Prüfung abbrechen">✕</button>
+    </div>
+    <div class="em-body" id="em-body"></div>
+    <div class="em-footer">
+      <button class="em-btn em-btn-secondary" onclick="emPrev()" id="em-prev">← Zurück</button>
+      <div class="em-question-dots" id="em-dots"></div>
+      <button class="em-btn em-btn-primary" onclick="emNext()" id="em-next">Weiter →</button>
+    </div>
+  </div>
+
+  <script src="js/data-gg.js"></script>
+  <script src="js/data-km.js"></script>
+  <script src="js/data-it.js"></script>
+  <script src="js/data-tests-gg.js"></script>
+  <script src="js/data-tests-km.js"></script>
+  <script src="js/data-tests-it.js"></script>
+  <script src="js/data-tests-extra.js"></script>
+  <script src="js/data-tests-voll.js"></script>
+  <script src="js/data-tipps.js"></script>
+  <script src="js/data-referenz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
